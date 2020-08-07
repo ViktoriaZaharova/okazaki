@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>OKAZAKI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+    <header>
+        <a href="/" class="logo"><img src="img/logo.png" alt=""></a>
+
+        <div class="header-item">
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="#" class="menu-links catalog-item-dropdown">
+                        <span class="icon"><img src="img/catalog-icon.svg" alt=""></span>
+                        <span class="text">Каталог</span>
+                    </a>
+                </li>
+                <li class="menu-item"><a href="#selection__modal" class="menu-links menu-links__selection open_modal">
+                    <span class="icon"><img src="img/filter-icon.svg" alt=""></span>
+                    <span class="text">Подобрать прибор</span>
+                </a></li>
+                <li class="menu-item"><a href="#" class="menu-links">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="header-item">
+            <form method="post" class="form-search">
+                <label><input type="text" placeholder="Поиск продукции" required name="search"></label>
+                <button type="submit">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="6.77067" cy="6.66667" r="5.66667" stroke="#4A4A4A" stroke-width="2"/>
+                        <path d="M11.4375 11.3335L16.1042 16.0002" stroke="#4A4A4A" stroke-width="2"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+
+        <div class="header-item">
+            <a href="tel:+74992371882" class="phone">+7 499 237 18 82</a>
+        </div>
+
+        <div class="header-item">
+            <a href="#" class="links-call">Связаться с нами</a>
+        </div>
+    </header>
+
+    <div class="category-dropdown">
+        <div class="category-dropdown__wrapper">
+            <div class="category-dropdown__item">
+                <div class="category-dropdown__img"><img src="img/product2.jpg" alt=""></div>
+
+                <div class="category-dropdown__content">
+                    <a href="#" class="category-dropdown__item-title">Термопары</a>
+                    <p>Более 30 моделей</p>
+
+                    <a href="#" class="btn btn-black">
+                        <span class="icon"><img src="img/arrow-btn.svg" alt=""></span>
+                        <span class="text">Перейти</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category-dropdown__item">
+                <div class="category-dropdown__img"><img src="img/product3.jpg" alt=""></div>
+
+                <div class="category-dropdown__content">
+                    <a href="#" class="category-dropdown__item-title">Термопары</a>
+                    <p>Более 30 моделей</p>
+
+                    <a href="#" class="btn btn-black">
+                        <span class="icon"><img src="img/arrow-btn.svg" alt=""></span>
+                        <span class="text">Перейти</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category-dropdown__item">
+                <div class="category-dropdown__img"><img src="img/product4.jpg" alt=""></div>
+
+                <div class="category-dropdown__content">
+                    <a href="#" class="category-dropdown__item-title">Термокарманы</a>
+                    <p>Более 30 моделей</p>
+
+                    <a href="#" class="btn btn-black">
+                        <span class="icon"><img src="img/arrow-btn.svg" alt=""></span>
+                        <span class="text">Перейти</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-home color-white">
+        <div class="slide">
+            <div class="main-home__slide">
+                <div class="slide-img"><img src="img/product1.png" alt=""></div>
+                <div class="container">
+                    <div class="main-home__subtitle">точные</div>
+                    <div class="clarification-slide">для любых измерений</div>
+                    <div class="main-home__subtitle">прочные</div>
+                    <div class="clarification-slide">для любых условий</div>
+                    <div class="main-home__subtitle">гибкие</div>
+                    <div class="clarification-slide">для любых задач</div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="main-home__slide">
+                <div class="slide-img"><img src="img/product1.png" alt=""></div>
+                <div class="container">
+                    <div class="main-home__title">Термодатчики</div>
+                    <div class="main-home__description">в минеральной изоляции</div>
+                    <div class="text-box">
+                        <p>от производителя номер №1 в Японии
+                            Okazaki Manufacturing Company</p>
+                    </div>
+
+                    <a href="#" class="btn btn-accent">
+                        <span class="icon"><img src="img/filter-icon.svg" alt=""></span>
+                        <span class="text">Подобрать прибор</span>
+                    </a>
+
+                    <a href="#" class="links color-white">
+                        <span class="icon"><img src="img/catalog-icon.svg" alt=""></span>
+                        <span class="text">Перейти в каталог</span>
+                    </a>
+
+                    <a href="#" class="links-details__slide">
+                        Подробнее
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="advantages color-white">
+        <div class="container">
+            <div class="advantages-text">
+                <p><strong>Термопары Okazaki</strong> подойдут для измерения температуры в любых, даже в самых трудных
+                    условиях. Минеральная изоляция и дополнительная оболочка обеспечивают надёжную защиту и стойкость
+                </p>
+            </div>
+
+            <div class="advantages-wrapper w-100">
+                <div class="advantages-box">
+                    <div class="advantages-box__icon"><img src="img/advantages-icon1.svg" alt=""></div>
+                    <h3>Высокая чувствительность</h3>
+                    <p>За счёт меньшей теплоёмкости чувствительно реагирует на изменения</p>
+                </div>
+                <div class="advantages-box">
+                    <div class="advantages-box__icon"><img src="img/advantages-icon2.svg" alt=""></div>
+                    <h3>Вариатиавность защиты</h3>
+                    <p>Мы можем изготовить оболочку наружного диаметра от 0,08 до 22 мм</p>
+                </div>
+                <div class="advantages-box">
+                    <div class="advantages-box__icon"><img src="img/advantages-icon3.svg" alt=""></div>
+                    <h3>Гибкий</h3>
+                    <p>Наша термопара легко устанавливается в различных местах на площадке</p>
+                </div>
+                <div class="advantages-box">
+                    <div class="advantages-box__icon"><img src="img/advantages-icon4.svg" alt=""></div>
+                    <h3>Широкое применение</h3>
+                    <p>Небольшой внешний диаметр и наличие оболочки позволяет измерять температуру маленьких целей</p>
+                </div>
+                <div class="advantages-box">
+                    <div class="advantages-box__icon"><img src="img/advantages-icon5.svg" alt=""></div>
+                    <h3>Долговечный</h3>
+                    <p>Изолирован и герметизирован оксидом магния, MgO является химически устойчивым к ухудшению </p>
+                </div>
+                <div class="advantages-box">
+                    <div class="advantages-box__icon"><img src="img/advantages-icon6.svg" alt=""></div>
+                    <h3>Устойчивый</h3>
+                    <p>Устойчив к высокой вибрации, агрессивной атмосфере, температуре от -200 до 1260 0С</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="catalog-home bg-white">
+        <div class="container">
+            <div class="line-title">
+                <h2>Каталог</h2>
+
+                <a href="#" class="links-catalog">
+                        <span class="icon">
+                            <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M3 0H5V10.126C6.72523 10.5701 8 12.1362 8 14C8 15.8638 6.72523 17.4299 5 17.874V20H3V17.874C1.27477 17.4299 0 15.8638 0 14C0 12.1362 1.27477 10.5701 3 10.126V0ZM17 16.874C15.2748 16.4299 14 14.8638 14 13C14 11.1362 15.2748 9.57006 17 9.12602V0H19V9.12602C20.7252 9.57006 22 11.1362 22 13C22 14.8638 20.7252 16.4299 19 16.874V20H17V16.874ZM10 20V9.87398C8.27477 9.42994 7 7.86384 7 6C7 4.13616 8.27477 2.57006 10 2.12602V0H12V2.12602C13.7252 2.57006 15 4.13616 15 6C15 7.86384 13.7252 9.42994 12 9.87398V20H10ZM6 14C6 15.1046 5.10457 16 4 16C2.89543 16 2 15.1046 2 14C2 12.8954 2.89543 12 4 12C5.10457 12 6 12.8954 6 14ZM11 8C12.1046 8 13 7.10457 13 6C13 4.89543 12.1046 4 11 4C9.89543 4 9 4.89543 9 6C9 7.10457 9.89543 8 11 8ZM20 13C20 14.1046 19.1046 15 18 15C16.8954 15 16 14.1046 16 13C16 11.8954 16.8954 11 18 11C19.1046 11 20 11.8954 20 13Z"
+          fill="white"/>
+</svg>
+                        </span>
+                    <span class="text-links">Подобрать прибор самостоятельно</span>
+                </a>
+
+                <a href="#" class="links-pdf">
+                        <span class="icon">
+                            <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M4 1H18V11.5858L10.5858 19H4V1Z" stroke="#111111" stroke-width="2"/>
+</svg>
+                        </span>
+                    <span class="text-links">PDF каталог</span>
+                </a>
+
+                <a href="#" class="btn btn-border">
+                        <span class="icon">
+                            <svg width="22" height="20" viewBox="0 0 22 20"
+                                 xmlns="http://www.w3.org/2000/svg">
+<rect y="3" width="22" height="2"/>
+<rect y="9" width="13" height="2"/>
+<rect y="15" width="19" height="2"/>
+</svg>
+                        </span>
+                    <span class="btn-text">Весь каталог</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="catalog-home__wrapper w-100">
+            <div class="catalog-home__box">
+                <div class="catalog-home__img"><img src="img/prod1.jpg" alt=""></div>
+
+                <div class="catalog-home__body">
+                    <a href="#" class="catalog-home__title">Термопары</a>
+                    <p>Минерально изолированные термопары для измерения температуры в различных условиях</p>
+                    <span>Более 30 моделей</span>
+                </div>
+
+                <a href="#" class="btn btn-black">
+                    <span class="icon"><img src="img/arrow-btn.svg" alt=""></span>
+                    <span class="text">Перейти</span>
+                </a>
+            </div>
+
+            <div class="catalog-home__box">
+                <div class="catalog-home__img"><img src="img/prod2.jpg" alt=""></div>
+
+                <div class="catalog-home__body">
+                    <a href="#" class="catalog-home__title">Термометры сопративления</a>
+                    <p>Минерально изолированные термопары для измерения температуры в различных условиях</p>
+                    <span>Более 30 моделей</span>
+                </div>
+
+                <a href="#" class="btn btn-black">
+                    <span class="icon"><img src="img/arrow-btn.svg" alt=""></span>
+                    <span class="text">Перейти</span>
+                </a>
+            </div>
+
+            <div class="catalog-home__box">
+                <div class="catalog-home__img"><img src="img/prod3.jpg" alt=""></div>
+
+                <div class="catalog-home__body">
+                    <a href="#" class="catalog-home__title">Термокарманы</a>
+                    <p>Минерально изолированные термопары для измерения температуры в различных условиях</p>
+                    <span>Более 30 моделей</span>
+                </div>
+
+                <a href="#" class="btn btn-black">
+                    <span class="icon"><img src="img/arrow-btn.svg" alt=""></span>
+                    <span class="text">Перейти</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about bg-white">
+        <div class="container">
+            <div class="about-content">
+                <h2>Производитель № 1 в Японии</h2>
+                <div class="text">
+                    <p>Okazaki была основана в Киото, городе, который многие считают духовным сердцем Японии.</p>
+                    <p>Здесь традиционная культура, архитектура и образ жизни Японии по-прежнему тщательно
+                        взращиваются.</p>
+                </div>
+                <div class="date-about">Вместе с вами с 1954 г.</div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="trading">
+        <div class="container">
+            <h2 class="text-center">Тайрику Трейдинг</h2>
+            <div class="description-title text-center">Ваш надежный поставщик</div>
+
+            <ul class="list-cube">
+                <li>50-летний опыт работы</li>
+                <li>Наличие склада в Москве</li>
+                <li>Грамотные менеджеры и сервисные инженеры</li>
+            </ul>
+            <ul class="list-cube">
+                <li>Гибкий подход к клиентам</li>
+                <li>Полный комплект разрешительной документации</li>
+                <li>Предоставление приборов на опытную эксплуатацию</li>
+            </ul>
+
+            <div class="trading-links">
+                <a href="#" class="trading-link btn btn-black">Вся продукция</a>
+                <a href="#" class="trading-link btn btn-border">Документы</a>
+                <a href="#" class="trading-link btn btn-border">Презентации</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-box">
+                <div class="copyright">2020 © Тайрику Трейдинг Ко., Лтд.</div>
+                <a href="#" class="web-developer">
+                    <p>Разработка сайта</p>
+                    <span class="logo-developer"><img src="img/developer.svg" alt=""></span>
+                </a>
+            </div>
+
+            <div class="footer-box text-right">
+                <a href="tel:+74992371882" class="phone-footer">+7 (499)237-1882</a>
+                <div class="phone-group">
+                    <a href="tel:+74992371926" class="phone-min">+7 (499) 237-1926,</a>
+                    <a href="tel:+74959319948" class="phone-min">+7 (495)931-9948</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</div>
+
+<!--modal-->
+<div class="modal__div" id="callback__modal">
+    <div class="modal__wrapper">
+        <div class="modal__close">
+            <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.61111 15L0.5 13.8889L6.88879 7.50012L0.5 1.11133L1.61111 0.000213287L7.9999 6.389L14.3889 0L15.5 1.11111L9.11102 7.50012L15.5 13.8891L14.3889 15.0002L7.9999 8.61123L1.61111 15Z"
+                      fill="black"/>
+            </svg>
+
+        </div>
+        <div class="modal-title">Заказать звонок</div>
+
+        <form class="form" method="post">
+            <label>
+                <span class="input-title">Как к Вам обращаться? <img src="img/star.svg" alt=""></span>
+                <input type="text" placeholder="Александр" name="name" required>
+            </label>
+            <label>
+                <span class="input-title">Телефон <img src="img/star.svg" alt=""></span>
+                <input type="text" placeholder="+ 7 (___) - ___ - __ - __" name="phone" required>
+            </label>
+
+            <label class="checkbox">
+                <input class="checkbox-inp" type="checkbox" name="checkbox">
+                <span class="checkbox-custom"></span>
+                <span class="label">Я принимаю условия «Соглашения на обработку персональных данных», в том числе в части обработки и использования персональных данных.</span>
+            </label>
+
+            <div class="form-bottom">
+                <button type="submit" class="btn btn-black">
+                    <span class="icon"><img src="img/arrow-btn.svg" alt=""></span>
+                    <span class="text">Отправить запрос</span>
+                </button>
+                <div class="necessarily">
+                    * - Поля обязательные для заполнения
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal__div" id="callback__modal2">
+    <div class="modal__wrapper">
+        <div class="modal__close">
+            <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.61111 15L0.5 13.8889L6.88879 7.50012L0.5 1.11133L1.61111 0.000213287L7.9999 6.389L14.3889 0L15.5 1.11111L9.11102 7.50012L15.5 13.8891L14.3889 15.0002L7.9999 8.61123L1.61111 15Z"
+                      fill="black"/>
+            </svg>
+
+        </div>
+        <div class="modal-title">Связаться с нами</div>
+
+        <form class="form" method="post">
+            <label>
+                <span class="input-title">Как к Вам обращаться? <img src="img/star.svg" alt=""></span>
+                <input type="text" placeholder="Александр" name="name" required>
+            </label>
+
+            <div class="form-group">
+                <label>
+                    <span class="input-title">E-mail <img src="img/star.svg" alt=""></span>
+                    <input type="text" placeholder="" name="mail" required>
+                </label>
+                <label>
+                    <span class="input-title">Телефон <img src="img/star.svg" alt=""></span>
+                    <input type="text" placeholder="+ 7 (___) - ___ - __ - __" name="phone" required>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <span class="input-title">Компания </span>
+                    <input type="text" placeholder="Название вашей организации" name="company">
+                </label>
+                <label>
+                    <span class="input-title">Должность </span>
+                    <input type="text" placeholder="" name="position">
+                </label>
+            </div>
+
+            <label>
+                <span class="input-title">Адрес </span>
+                <input type="text" placeholder="Город, улица, дом" name="address" required>
+            </label>
+
+            <label>
+                <span class="input-title">Сообщение </span>
+                <input type="text" placeholder="" name="message">
+            </label>
+
+            <label class="checkbox">
+                <input class="checkbox-inp" type="checkbox" name="checkbox">
+                <span class="checkbox-custom"></span>
+                <span class="label">Я принимаю условия «Соглашения на обработку персональных данных», в том числе в части обработки и использования персональных данных.</span>
+            </label>
+
+            <div class="form-bottom">
+                <button type="submit" class="btn btn-black">
+                    <span class="icon"><img src="img/arrow-btn.svg" alt=""></span>
+                    <span class="text">Отправить запрос</span>
+                </button>
+                <div class="necessarily">
+                    * - Поля обязательные для заполнения
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal__div" id="thanks__modal">
+    <div class="modal__wrapper">
+
+        <div class="thanks__modal-content">
+
+            <div class="modal__close">
+                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M1.61111 15L0.5 13.8889L6.88879 7.50012L0.5 1.11133L1.61111 0.000213287L7.9999 6.389L14.3889 0L15.5 1.11111L9.11102 7.50012L15.5 13.8891L14.3889 15.0002L7.9999 8.61123L1.61111 15Z"
+                          fill="black"/>
+                </svg>
+            </div>
+
+            <div class="form-img"><img src="img/icon-thanks.svg" alt=""></div>
+
+            <div class="modal-title">Заявка успешно принята</div>
+
+            <div class="description-modal">
+                <p> В ближайшее время наш специалист свяжется с Вами.</p>
+                <p>Примерное время ожидания 2 минуты.</p>
+            </div>
+
+            <a href="#" class="btn btn-white btn-ok">Ок</a>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal__div" id="selection__modal">
+    <div class="modal__wrapper">
+        <div class="modal__close">
+            <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.61111 15L0.5 13.8889L6.88879 7.50012L0.5 1.11133L1.61111 0.000213287L7.9999 6.389L14.3889 0L15.5 1.11111L9.11102 7.50012L15.5 13.8891L14.3889 15.0002L7.9999 8.61123L1.61111 15Z"
+                      fill="black"/>
+            </svg>
+
+        </div>
+        <div class="modal-title">Подбор прибора</div>
+
+        <form class="form form-selection" method="post">
+            <div class="form-group__selection">
+                <div class="form-selection__title">Тип прибора</div>
+                <ul class="list-radio">
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="checkbox" name="radio">
+                            <span class="radio-custom"></span>
+                            <span class="label">Термопреобразователь сопротивления</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="checkbox" name="radio">
+                            <span class="radio-custom"></span>
+                            <span class="label">Термопреобразователь сопротивления</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <label>
+                <span class="input-title">Телефон <img src="img/star.svg" alt=""></span>
+                <input type="text" placeholder="+ 7 (___) - ___ - __ - __" name="phone" required>
+            </label>
+
+            <label class="checkbox">
+                <input class="checkbox-inp" type="checkbox" name="checkbox">
+                <span class="checkbox-custom"></span>
+                <span class="label">Я принимаю условия «Соглашения на обработку персональных данных», в том числе в части обработки и использования персональных данных.</span>
+            </label>
+
+            <button type="submit" class="btn btn-black">
+                Искать
+            </button>
+        </form>
+    </div>
+</div>
+
+
+<div class="overlay"></div>
+
+
+<a href="#callback__modal" class="btn btn-accent open_modal">Заказать звонок</a>
+<a href="#callback__modal2" class="btn btn-accent open_modal">Связаться с нами</a>
+<a href="#thanks__modal" class="btn btn-accent open_modal">Заявка успешно принята</a>
+
+<script src="js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>

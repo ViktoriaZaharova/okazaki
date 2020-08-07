@@ -1,0 +1,59 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0)">
+        <path d="M50 59L50 -9.53674e-07" stroke="white" stroke-linecap="round" stroke-dasharray="2 5"/>
+        <path d="M50 59L50 -9.53674e-07" stroke="white" stroke-linecap="round" stroke-dasharray="2 5"/>
+        <path d="M10 59L10 -9.53674e-07" stroke="white" stroke-linecap="round" stroke-dasharray="2 5"/>
+        <path d="M18 0V60M42 0V60" stroke="#E83535" stroke-width="2"/>
+        <path d="M18 0V60M42 0V60" stroke="#F02828" stroke-width="2"/>
+        <path d="M18 0V60M42 0V60" stroke="#DB3217" stroke-width="2"/>
+        <path d="M30 0L30 60" stroke="white" stroke-width="2"/>
+        <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="21" y="0" width="18" height="60">
+            <path d="M39 60V0H34.5V60H39Z" fill="#E83535"/>
+            <path d="M39 60V0H34.5V60H39Z" fill="#F02828"/>
+            <path d="M39 60V0H34.5V60H39Z" fill="#DB3217"/>
+            <path d="M21 0V60H25.5V0H21Z" fill="#E83535"/>
+            <path d="M21 0V60H25.5V0H21Z" fill="#F02828"/>
+            <path d="M21 0V60H25.5V0H21Z" fill="#DB3217"/>
+        </mask>
+        <g mask="url(#mask0)">
+            <path d="M58.213 -35.2133L15.7866 7.21313" stroke="#E83535" stroke-width="2"/>
+            <path d="M58.213 -35.2133L15.7866 7.21313" stroke="#F02828" stroke-width="2"/>
+            <path d="M58.213 -35.2133L15.7866 7.21313" stroke="#DB3217" stroke-width="2"/>
+            <path d="M58.213 -27.7868L15.7866 14.6396" stroke="#E83535" stroke-width="2"/>
+            <path d="M58.213 -27.7868L15.7866 14.6396" stroke="#F02828" stroke-width="2"/>
+            <path d="M58.213 -27.7868L15.7866 14.6396" stroke="#DB3217" stroke-width="2"/>
+            <path d="M58.213 -20.3602L15.7866 22.0662" stroke="#E83535" stroke-width="2"/>
+            <path d="M58.213 -20.3602L15.7866 22.0662" stroke="#F02828" stroke-width="2"/>
+            <path d="M58.213 -20.3602L15.7866 22.0662" stroke="#DB3217" stroke-width="2"/>
+            <path d="M58.213 -12.9337L15.7866 29.4927" stroke="#E83535" stroke-width="2"/>
+            <path d="M58.213 -12.9337L15.7866 29.4927" stroke="#F02828" stroke-width="2"/>
+            <path d="M58.213 -12.9337L15.7866 29.4927" stroke="#DB3217" stroke-width="2"/>
+            <path d="M58.213 -5.50722L15.7866 36.9192" stroke="#E83535" stroke-width="2"/>
+            <path d="M58.213 -5.50722L15.7866 36.9192" stroke="#F02828" stroke-width="2"/>
+            <path d="M58.213 -5.50722L15.7866 36.9192" stroke="#DB3217" stroke-width="2"/>
+            <path d="M58.213 1.9193L15.7866 44.3457" stroke="#E83535" stroke-width="2"/>
+            <path d="M58.213 1.9193L15.7866 44.3457" stroke="#F02828" stroke-width="2"/>
+            <path d="M58.213 1.9193L15.7866 44.3457" stroke="#DB3217" stroke-width="2"/>
+            <path d="M58.213 9.34581L15.7866 51.7722" stroke="#E83535" stroke-width="2"/>
+            <path d="M58.213 9.34581L15.7866 51.7722" stroke="#F02828" stroke-width="2"/>
+            <path d="M58.213 9.34581L15.7866 51.7722" stroke="#DB3217" stroke-width="2"/>
+            <path d="M58.213 16.7723L15.7866 59.1987" stroke="#E83535" stroke-width="2"/>
+            <path d="M58.213 16.7723L15.7866 59.1987" stroke="#F02828" stroke-width="2"/>
+            <path d="M58.213 16.7723L15.7866 59.1987" stroke="#DB3217" stroke-width="2"/>
+            <path d="M58.213 24.1988L15.7866 66.6252" stroke="#E83535" stroke-width="2"/>
+            <path d="M58.213 24.1988L15.7866 66.6252" stroke="#F02828" stroke-width="2"/>
+            <path d="M58.213 24.1988L15.7866 66.6252" stroke="#DB3217" stroke-width="2"/>
+            <path d="M58.213 31.6254L15.7866 74.0518" stroke="#E83535" stroke-width="2"/>
+            <path d="M58.213 31.6254L15.7866 74.0518" stroke="#F02828" stroke-width="2"/>
+            <path d="M58.213 31.6254L15.7866 74.0518" stroke="#DB3217" stroke-width="2"/>
+            <path d="M58.213 38.6254L15.7866 81.0518" stroke="#E83535" stroke-width="2"/>
+            <path d="M58.213 38.6254L15.7866 81.0518" stroke="#F02828" stroke-width="2"/>
+            <path d="M58.213 38.6254L15.7866 81.0518" stroke="#DB3217" stroke-width="2"/>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="clip0">
+            <rect width="60" height="60" fill="white"/>
+        </clipPath>
+    </defs>
+</svg>
