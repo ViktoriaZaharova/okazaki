@@ -173,6 +173,11 @@
     margin: 0
     padding: 0 0 40px
 
+  .catalog-level-1
+    h2
+      width: auto
+      margin: 0
+
 
 @media only screen and (max-width: 1199px)
   .links-call, .phone, .menu-links
@@ -303,6 +308,7 @@
     .line
       width: 1%
       order: 1
+      margin: 0 auto
     h2
       width: auto
     .line-title
@@ -312,6 +318,16 @@
   .catalog-home__body
     padding: 30px
 
+  .catalog-level-1
+    padding: 0 0 60px
+    .links-pdf
+      width: auto
+      margin: 0
+    .catalog-home__wrapper
+      margin: 36px 0 0
+
+  .breadcrumbs-wrapper
+    padding: 40px 0 20px
 
 @media only screen and (max-width: 860px)
   .header-item__menu, .header-item__search
@@ -438,6 +454,18 @@
 
   .about-content
     max-width: 642px
+
+  .catalog-level-1
+    .line-bottom
+      display: flex
+      align-items: center
+      padding: 40px 0 0
+      .btn
+        max-width: 343px
+        height: 62px
+        font-size: 18px
+      .links-pdf
+        display: none
 
 @media only screen and (max-width: 710px)
   .container
@@ -612,9 +640,21 @@
     margin: 0
     font-size: 16px
 
-
   .line-bottom
     display: flex
+
+  .catalog-level-1
+    padding: 0 0 60px
+    .line-bottom
+      padding: 40px 10px 0
+      .links-pdf
+        display: flex
+    .catalog-home__wrapper
+      margin: 42px 0 0
+
+  h1
+    font-size: 32px
+
 
 
 @media only screen and (max-width: 575px)
@@ -750,6 +790,23 @@
 
   .btn-ok
     margin: 40px auto 0
+
+  .breadcrumbs
+    display: none
+
+  .breadcrumbs-mobile
+    display: flex
+    align-items: center
+    color: #111111
+    font-size: 16px
+    font-weight: 500
+    .icon
+      margin: 0 15px 0 0
+      width: 21px
+      height: 15px
+
+  .breadcrumbs-wrapper
+    padding: 42px 0 22px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 420px)

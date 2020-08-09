@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>OKAZAKI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+    <header>
+        <a href="/" class="logo"><img src="img/logo.png" alt=""></a>
+
+        <div class="header-item header-item__menu">
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="#" class="menu-links catalog-item-dropdown">
+                        <span class="icon"><img src="img/catalog-icon.svg" alt=""></span>
+                        <span class="text">Каталог</span>
+                    </a>
+                </li>
+                <li class="menu-item"><a href="#selection__modal" class="menu-links menu-links__selection open_modal">
+                    <span class="icon"><img src="img/filter-icon.svg" alt=""></span>
+                    <span class="text">Подобрать прибор</span>
+                </a></li>
+                <li class="menu-item"><a href="#" class="menu-links">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="header-item header-item__search">
+            <form method="post" class="form-search">
+
+                <label><input type="text" placeholder="Поиск продукции" required name="search"></label>
+                <button type="submit">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="6.77067" cy="6.66667" r="5.66667" stroke="#4A4A4A" stroke-width="2"/>
+                        <path d="M11.4375 11.3335L16.1042 16.0002" stroke="#4A4A4A" stroke-width="2"/>
+                    </svg>
+                    <span class="text">Найти</span>
+                </button>
+            </form>
+            <div class="btn-search">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="6.77067" cy="6.66667" r="5.66667" stroke="#4A4A4A" stroke-width="2"/>
+                    <path d="M11.4375 11.3335L16.1042 16.0002" stroke="#4A4A4A" stroke-width="2"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="header-item header-item__phone">
+            <a href="tel:+74992371882" class="phone">+7 499 237 18 82</a>
+        </div>
+
+        <div class="header-item">
+            <a href="#" class="links-call"><span class="links-call__text">Связаться с нами</span>
+                <span class="links-call__icon">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.95757 1.2637L1.15277 3.13845L1.15153 3.13922L1.14985 3.14023C1.05736 3.201 1 3.30253 1 3.41709V3.42162V4.60668C1 13.6605 8.33949 21 17.3933 21H18.5829C18.6587 21 18.784 20.9455 18.8686 20.8329L20.7363 17.0424L15.3888 13.0316L12.9464 14.8634L12.6514 15.0846L12.2834 15.0614C10.8984 14.974 9.57601 14.3829 8.59208 13.3962C7.61018 12.4115 7.02206 11.1019 6.93843 9.71379L6.91635 9.34734L7.13662 9.05365L8.96844 6.61122L4.95757 1.2637Z"
+          stroke="white" stroke-width="2"/>
+</svg>
+            </span>
+            </a>
+        </div>
+
+        <div class="contact-popup">
+            <div class="contact-popup__wrapper">
+                <div class="modal__close">
+                    <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M1.61111 15L0.5 13.8889L6.88879 7.50012L0.5 1.11133L1.61111 0.000213287L7.9999 6.389L14.3889 0L15.5 1.11111L9.11102 7.50012L15.5 13.8891L14.3889 15.0002L7.9999 8.61123L1.61111 15Z"
+                              fill="black"/>
+                    </svg>
+                </div>
+
+                <div class="contact-popup__title">Связаться с нами</div>
+
+                <a href="tel:+74992371882" class="phone-modal">+7 499 237 18 82</a>
+
+                <a href="mailto:info@okazaki.ru" class="mail-modal">info@okazaki.ru</a>
+
+                <ul class="menu-modal">
+                    <li><a href="#">Все контакты</a></li>
+                    <li><a href="#callback__modal" class="open_modal">Заказать звонок</a></li>
+                    <li><a href="#callback__modal2" class="open_modal">Оставить заявку</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="breadcrumbs-wrapper">
+           <div class="container">
+               <ul class="breadcrumbs">
+                   <li><a href="index.html">Главная</a></li>
+                   <li><span>Каталог</span></li>
+               </ul>
+               <a href="#" class="breadcrumbs-mobile">
+                   <span class="icon">
+                       <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.5 9H2M2 9L9.5 16.5M2 9L9.5 1.5" stroke="black" stroke-width="2"/>
+</svg>
+                   </span>
+                   <span class="text">Назад</span>
+               </a>
+           </div>
+        </div>
+
+        <section class="catalog-home catalog-level-1">
+            <div class="container">
+                <div class="line-title">
+                    <h1>Каталог</h1>
+
+
+                    <a href="#" class="links-pdf">
+                        <span class="icon">
+                            <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M4 1H18V11.5858L10.5858 19H4V1Z" stroke="#111111" stroke-width="2"/>
+</svg>
+                        </span>
+                        <span class="text-links">Скачать PDF каталог</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="catalog-home__wrapper w-100">
+                <div class="catalog-home__box">
+                    <div class="catalog-home__img"><img src="img/prod1.jpg" alt=""></div>
+
+                    <div class="catalog-home__body">
+                        <a href="#" class="catalog-home__title">Термопары</a>
+                        <p>Минерально изолированные термопары для измерения температуры в различных условиях</p>
+                        <span>Более 30 моделей</span>
+                    </div>
+
+                    <a href="#" class="btn btn-black">
+                        <span class="icon"><img src="img/arrow-btn.svg" alt=""></span>
+                        <span class="text">Перейти</span>
+                    </a>
+                </div>
+
+                <div class="catalog-home__box">
+                    <div class="catalog-home__img"><img src="img/prod2.jpg" alt=""></div>
+
+                    <div class="catalog-home__body">
+                        <a href="#" class="catalog-home__title">Термометры сопративления</a>
+                        <p>Минерально изолированные термопары для измерения температуры в различных условиях</p>
+                        <span>Более 30 моделей</span>
+                    </div>
+
+                    <a href="#" class="btn btn-black">
+                        <span class="icon"><img src="img/arrow-btn.svg" alt=""></span>
+                        <span class="text">Перейти</span>
+                    </a>
+                </div>
+
+                <div class="catalog-home__box">
+                    <div class="catalog-home__img"><img src="img/prod3.jpg" alt=""></div>
+
+                    <div class="catalog-home__body">
+                        <a href="#" class="catalog-home__title">Термокарманы</a>
+                        <p>Минерально изолированные термопары для измерения температуры в различных условиях</p>
+                        <span>Более 30 моделей</span>
+                    </div>
+
+                    <a href="#" class="btn btn-black">
+                        <span class="icon"><img src="img/arrow-btn.svg" alt=""></span>
+                        <span class="text">Перейти</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="line-bottom">
+                <a href="#" class="btn btn-accent">
+                        <span class="icon">
+                            <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M3 0H5V10.126C6.72523 10.5701 8 12.1362 8 14C8 15.8638 6.72523 17.4299 5 17.874V20H3V17.874C1.27477 17.4299 0 15.8638 0 14C0 12.1362 1.27477 10.5701 3 10.126V0ZM17 16.874C15.2748 16.4299 14 14.8638 14 13C14 11.1362 15.2748 9.57006 17 9.12602V0H19V9.12602C20.7252 9.57006 22 11.1362 22 13C22 14.8638 20.7252 16.4299 19 16.874V20H17V16.874ZM10 20V9.87398C8.27477 9.42994 7 7.86384 7 6C7 4.13616 8.27477 2.57006 10 2.12602V0H12V2.12602C13.7252 2.57006 15 4.13616 15 6C15 7.86384 13.7252 9.42994 12 9.87398V20H10ZM6 14C6 15.1046 5.10457 16 4 16C2.89543 16 2 15.1046 2 14C2 12.8954 2.89543 12 4 12C5.10457 12 6 12.8954 6 14ZM11 8C12.1046 8 13 7.10457 13 6C13 4.89543 12.1046 4 11 4C9.89543 4 9 4.89543 9 6C9 7.10457 9.89543 8 11 8ZM20 13C20 14.1046 19.1046 15 18 15C16.8954 15 16 14.1046 16 13C16 11.8954 16.8954 11 18 11C19.1046 11 20 11.8954 20 13Z"
+          fill="white"/>
+</svg>
+                        </span>
+                    <span class="text-links">Подобрать прибор</span>
+                </a>
+                <a href="#" class="links-pdf">
+                        <span class="icon">
+                            <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M4 1H18V11.5858L10.5858 19H4V1Z" stroke="#111111" stroke-width="2"/>
+</svg>
+                        </span>
+                    <span class="text-links">Скачать PDF каталог</span>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-box">
+                <div class="copyright">2020 © Тайрику Трейдинг Ко., Лтд.</div>
+                <a href="#" class="web-developer">
+                    <p>Разработка сайта</p>
+                    <span class="logo-developer"><img src="img/developer.svg" alt=""></span>
+                </a>
+            </div>
+
+            <div class="footer-box text-right">
+                <a href="tel:+74992371882" class="phone-footer">+7 (499)237-1882</a>
+                <div class="phone-group">
+                    <a href="tel:+74992371926" class="phone-min">+7 (499) 237-1926,</a>
+                    <a href="tel:+74959319948" class="phone-min">+7 (495)931-9948</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</div>
+
+<!--modal-->
+<div class="modal__div" id="callback__modal">
+    <div class="modal__wrapper">
+        <div class="modal__close">
+            <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.61111 15L0.5 13.8889L6.88879 7.50012L0.5 1.11133L1.61111 0.000213287L7.9999 6.389L14.3889 0L15.5 1.11111L9.11102 7.50012L15.5 13.8891L14.3889 15.0002L7.9999 8.61123L1.61111 15Z"
+                      fill="black"/>
+            </svg>
+
+        </div>
+        <div class="modal-title">Заказать звонок</div>
+
+        <form class="form" method="post">
+            <label>
+                <span class="input-title">Как к Вам обращаться? <img src="img/star.svg" alt=""></span>
+                <input type="text" placeholder="Александр" name="name" required>
+            </label>
+            <label>
+                <span class="input-title">Телефон <img src="img/star.svg" alt=""></span>
+                <input type="text" placeholder="+ 7 (___) - ___ - __ - __" name="phone" required>
+            </label>
+
+            <label class="checkbox">
+                <input class="checkbox-inp" type="checkbox" name="checkbox">
+                <span class="checkbox-custom"></span>
+                <span class="label">Я принимаю условия «Соглашения на обработку персональных данных», в том числе в части обработки и использования персональных данных.</span>
+            </label>
+
+            <div class="form-bottom">
+                <button type="submit" class="btn btn-black">
+                    <span class="icon"><img src="img/arrow-btn.svg" alt=""></span>
+                    <span class="text">Отправить запрос</span>
+                </button>
+                <div class="necessarily">
+                    * - Поля обязательные для заполнения
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal__div" id="callback__modal2">
+    <div class="modal__wrapper">
+        <div class="modal__close">
+            <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.61111 15L0.5 13.8889L6.88879 7.50012L0.5 1.11133L1.61111 0.000213287L7.9999 6.389L14.3889 0L15.5 1.11111L9.11102 7.50012L15.5 13.8891L14.3889 15.0002L7.9999 8.61123L1.61111 15Z"
+                      fill="black"/>
+            </svg>
+
+        </div>
+        <div class="modal-title">Связаться с нами</div>
+
+        <form class="form" method="post">
+            <label>
+                <span class="input-title">Как к Вам обращаться? <img src="img/star.svg" alt=""></span>
+                <input type="text" placeholder="Александр" name="name" required>
+            </label>
+
+            <div class="form-group">
+                <label>
+                    <span class="input-title">E-mail <img src="img/star.svg" alt=""></span>
+                    <input type="text" placeholder="" name="mail" required>
+                </label>
+                <label>
+                    <span class="input-title">Телефон <img src="img/star.svg" alt=""></span>
+                    <input type="text" placeholder="+ 7 (___) - ___ - __ - __" name="phone" required>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <span class="input-title">Компания </span>
+                    <input type="text" placeholder="Название вашей организации" name="company">
+                </label>
+                <label>
+                    <span class="input-title">Должность </span>
+                    <input type="text" placeholder="" name="position">
+                </label>
+            </div>
+
+            <label>
+                <span class="input-title">Адрес </span>
+                <input type="text" placeholder="Город, улица, дом" name="address" required>
+            </label>
+
+            <label>
+                <span class="input-title">Сообщение </span>
+                <input type="text" placeholder="" name="message">
+            </label>
+
+            <label class="checkbox">
+                <input class="checkbox-inp" type="checkbox" name="checkbox">
+                <span class="checkbox-custom"></span>
+                <span class="label">Я принимаю условия «Соглашения на обработку персональных данных», в том числе в части обработки и использования персональных данных.</span>
+            </label>
+
+            <div class="form-bottom">
+                <button type="submit" class="btn btn-black">
+                    <span class="icon"><img src="img/arrow-btn.svg" alt=""></span>
+                    <span class="text">Отправить запрос</span>
+                </button>
+                <div class="necessarily">
+                    * - Поля обязательные для заполнения
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal__div" id="thanks__modal">
+    <div class="modal__wrapper">
+
+        <div class="thanks__modal-content">
+
+            <div class="modal__close">
+                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M1.61111 15L0.5 13.8889L6.88879 7.50012L0.5 1.11133L1.61111 0.000213287L7.9999 6.389L14.3889 0L15.5 1.11111L9.11102 7.50012L15.5 13.8891L14.3889 15.0002L7.9999 8.61123L1.61111 15Z"
+                          fill="black"/>
+                </svg>
+            </div>
+
+            <div class="form-img"><img src="img/icon-thanks.svg" alt=""></div>
+
+            <div class="modal-title">Заявка успешно принята</div>
+
+            <div class="description-modal">
+                <p> В ближайшее время наш специалист свяжется с Вами.</p>
+                <p>Примерное время ожидания 2 минуты.</p>
+            </div>
+
+            <a href="#" class="btn btn-white btn-ok">Ок</a>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal__div" id="selection__modal">
+    <div class="modal__wrapper">
+        <div class="modal__close">
+            <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.61111 15L0.5 13.8889L6.88879 7.50012L0.5 1.11133L1.61111 0.000213287L7.9999 6.389L14.3889 0L15.5 1.11111L9.11102 7.50012L15.5 13.8891L14.3889 15.0002L7.9999 8.61123L1.61111 15Z"
+                      fill="black"/>
+            </svg>
+
+        </div>
+        <div class="modal-title">Подбор прибора</div>
+
+        <form class="form form-selection" method="post">
+            <div class="form-group__selection">
+                <div class="form-selection__title">Тип прибора</div>
+                <ul class="list-radio">
+                    <li>
+                        <label class="radio radio-click">
+                            <input class="radio-inp" type="radio" name="radio">
+                            <span class="radio-custom"></span>
+                            <span class="label">Термопреобразователь сопротивления</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio">
+                            <span class="radio-custom"></span>
+                            <span class="label">Термопреобразователь сопротивления</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-group__selection">
+                <div class="form-selection__title">Количество чувствительных элементов</div>
+                <ul class="list-radio">
+                    <li>
+                        <label class="radio radio-click">
+                            <input class="radio-inp" type="radio" name="radio-val">
+                            <span class="radio-custom"></span>
+                            <span class="label">Неважно</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-val">
+                            <span class="radio-custom"></span>
+                            <span class="label">Один</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-val">
+                            <span class="radio-custom"></span>
+                            <span class="label">Два</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-group__selection">
+                <div class="form-selection__title">Количество чувствительных элементов</div>
+                <div class="polzunok-container">
+                    <input type="text" class="polzunok-input-left-1"/>
+                    <div class="polzunok-1 polzunok"></div>
+                    <input type="text" class="polzunok-input-right-1"/>
+                </div>
+            </div>
+
+            <div class="form-group__selection">
+                <div class="form-selection__title">Класс допуска</div>
+                <ul class="list-radio list-radio-version-2">
+                    <li>
+                        <label class="radio radio-click">
+                            <input class="radio-inp" type="radio" name="radio-class">
+                            <span class="radio-custom"></span>
+                            <span class="label">Все</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-class">
+                            <span class="radio-custom"></span>
+                            <span class="label">АА</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-class">
+                            <span class="radio-custom"></span>
+                            <span class="label">А</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-class">
+                            <span class="radio-custom"></span>
+                            <span class="label">B</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-class">
+                            <span class="radio-custom"></span>
+                            <span class="label">C</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-group__selection">
+                <div class="form-selection__title">Выходной сигнал</div>
+                <ul class="list-radio">
+                    <li>
+                        <label class="radio radio-click">
+                            <input class="radio-inp" type="radio" name="radio-signal">
+                            <span class="radio-custom"></span>
+                            <span class="label">Все</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-signal">
+                            <span class="radio-custom"></span>
+                            <span class="label">Аналоговый</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-signal">
+                            <span class="radio-custom"></span>
+                            <span class="label">Цифровой</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-group__selection">
+                <div class="form-selection__title">Подключение</div>
+                <ul class="list-radio">
+                    <li>
+                        <label class="radio radio-click">
+                            <input class="radio-inp" type="radio" name="radio-connection">
+                            <span class="radio-custom"></span>
+                            <span class="label">Все</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-connection">
+                            <span class="radio-custom"></span>
+                            <span class="label">Двухпроводное</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-connection">
+                            <span class="radio-custom"></span>
+                            <span class="label">Трехпроводное</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-group__selection">
+                <div class="form-selection__title">Клеммная голова</div>
+                <ul class="list-radio">
+                    <li>
+                        <label class="radio radio-click">
+                            <input class="radio-inp" type="radio" name="radio-terminal">
+                            <span class="radio-custom"></span>
+                            <span class="label">Все</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-terminal">
+                            <span class="radio-custom"></span>
+                            <span class="label">Да</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-terminal">
+                            <span class="radio-custom"></span>
+                            <span class="label">Нет</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-group__selection">
+                <div class="form-selection__title">Взрывозащита</div>
+                <ul class="list-radio">
+                    <li>
+                        <label class="radio radio-click">
+                            <input class="radio-inp" type="radio" name="radio-protection">
+                            <span class="radio-custom"></span>
+                            <span class="label">Все</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-protection">
+                            <span class="radio-custom"></span>
+                            <span class="label">Да</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-protection">
+                            <span class="radio-custom"></span>
+                            <span class="label">Нет</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-group__selection">
+                <div class="form-selection__title">Степень защиты от влаги и пыли</div>
+                <ul class="list-radio">
+                    <li>
+                        <label class="radio radio-click">
+                            <input class="radio-inp" type="radio" name="radio-against">
+                            <span class="radio-custom"></span>
+                            <span class="label">Все</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-against">
+                            <span class="radio-custom"></span>
+                            <span class="label">Нет</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-against">
+                            <span class="radio-custom"></span>
+                            <span class="label">IP54</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-against">
+                            <span class="radio-custom"></span>
+                            <span class="label">IP65</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-against">
+                            <span class="radio-custom"></span>
+                            <span class="label">IP66</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-against">
+                            <span class="radio-custom"></span>
+                            <span class="label">IP67</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-group__selection">
+                <div class="form-selection__title">Минимальная температура окружающей среды <sub>0</sub>C</div>
+                <div class="polzunok-container">
+                    <input type="text" class="polzunok-input-left-2"/>
+                    <div class="polzunok-2 polzunok"></div>
+                </div>
+            </div>
+
+            <div class="form-group__selection">
+                <div class="form-selection__title">Максимальная температура окружающей среды <sub>0</sub>C</div>
+                <div class="polzunok-container">
+                    <input type="text" class="polzunok-input-left-3"/>
+                    <div class="polzunok-3 polzunok"></div>
+                </div>
+            </div>
+
+            <div class="form-group__selection">
+                <div class="form-selection__title">Защитная гильза</div>
+                <ul class="list-radio">
+                    <li>
+                        <label class="radio radio-click">
+                            <input class="radio-inp" type="radio" name="radio-sleeve">
+                            <span class="radio-custom"></span>
+                            <span class="label">Все</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-sleeve">
+                            <span class="radio-custom"></span>
+                            <span class="label">Да</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio">
+                            <input class="radio-inp" type="radio" name="radio-sleeve">
+                            <span class="radio-custom"></span>
+                            <span class="label">Нет</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <button type="submit" class="btn btn-black">
+                Искать
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="modal__div" id="search__modal">
+    <div class="modal__wrapper">
+        <div class="modal__close">
+            <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.61111 15L0.5 13.8889L6.88879 7.50012L0.5 1.11133L1.61111 0.000213287L7.9999 6.389L14.3889 0L15.5 1.11111L9.11102 7.50012L15.5 13.8891L14.3889 15.0002L7.9999 8.61123L1.61111 15Z"
+                      fill="black"/>
+            </svg>
+        </div>
+        <div class="modal-title">Поиск</div>
+
+        <form class="form form-search__modal" method="post">
+            <label>
+                <input type="text" placeholder="Приб|" name="search" required>
+            </label>
+
+            <button type="submit" class="btn btn-border-accent">
+                    <span class="icon">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="6.77067" cy="6.66667" r="5.66667" stroke="#4A4A4A" stroke-width="2"/>
+    <path d="M11.4375 11.3335L16.1042 16.0002" stroke="#4A4A4A" stroke-width="2"/>
+</svg>
+                    </span>
+                <span class="text">Найти</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="modal__div" id="catalog__modal">
+    <div class="modal__wrapper">
+        <div class="modal__close">
+            <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.61111 15L0.5 13.8889L6.88879 7.50012L0.5 1.11133L1.61111 0.000213287L7.9999 6.389L14.3889 0L15.5 1.11111L9.11102 7.50012L15.5 13.8891L14.3889 15.0002L7.9999 8.61123L1.61111 15Z"
+                      fill="black"/>
+            </svg>
+        </div>
+        <div class="modal-title">Каталог</div>
+        <div class="category-dropdown__wrapper">
+            <div class="category-dropdown__item">
+                <div class="category-dropdown__img"><img src="img/prod1.jpg" alt=""></div>
+
+                <div class="category-dropdown__content">
+                    <a href="#" class="category-dropdown__item-title">Термопары</a>
+                    <p>Более 30 моделей</p>
+
+                    <a href="#" class="btn btn-black">
+                        <span class="icon"><img src="img/arrow-btn.svg" alt=""></span>
+                        <span class="text">Перейти</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category-dropdown__item">
+                <div class="category-dropdown__img"><img src="img/prod2.jpg" alt=""></div>
+
+                <div class="category-dropdown__content">
+                    <a href="#" class="category-dropdown__item-title">Термопары</a>
+                    <p>Более 30 моделей</p>
+
+                    <a href="#" class="btn btn-black">
+                        <span class="icon"><img src="img/arrow-btn.svg" alt=""></span>
+                        <span class="text">Перейти</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category-dropdown__item">
+                <div class="category-dropdown__img"><img src="img/prod3.jpg" alt=""></div>
+
+                <div class="category-dropdown__content">
+                    <a href="#" class="category-dropdown__item-title">Термокарманы</a>
+                    <p>Более 30 моделей</p>
+
+                    <a href="#" class="btn btn-black">
+                        <span class="icon"><img src="img/arrow-btn.svg" alt=""></span>
+                        <span class="text">Перейти</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <a href="#selection__modal" class="btn btn-accent open_modal">
+            <span class="icon"><img src="img/filter-icon.svg" alt=""></span>
+            <span class="text">Подобрать прибор</span>
+        </a>
+
+    </div>
+</div>
+
+<div class="overlay"></div>
+
+<div class="mobile-fixed__menu">
+    <a href="/" class="mobile-links">
+        <span class="mobile-links__icon">
+<svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd"
+      d="M22.5478 18.5455C20.6544 21.8831 17.0836 24.1285 13 24.1285C8.91958 24.1285 5.35112 21.8866 3.45658 18.5533C3.57648 18.5652 3.69437 18.5766 3.81058 18.5877C5.02173 18.7041 6.05115 18.803 7.28598 19.4582C9.26288 16.4065 10.2294 15.2391 12.7304 13.096C9.63402 14.2023 8.14524 14.4601 4.52841 14.6557C4.4753 16.0586 4.04576 17.0044 3.5404 18.1172C3.49213 18.2235 3.44316 18.3313 3.39377 18.4412C2.51488 16.8522 2.01385 15.0215 2.01385 13.0712C2.01385 6.954 6.94287 2.01385 13 2.01385C19.0571 2.01385 23.9862 6.954 23.9862 13.0712C23.9862 15.0511 23.4698 16.9077 22.5659 18.5135C22.5055 18.3785 22.4457 18.2467 22.3869 18.1172C21.8815 17.0044 21.452 16.0586 21.3989 14.6557C17.7821 14.4601 16.2933 14.2023 13.1969 13.096C15.6979 15.2391 16.6644 16.4065 18.6413 19.4582C19.8761 18.803 20.9056 18.7041 22.1167 18.5877C22.2577 18.5742 22.4013 18.5604 22.5478 18.5455ZM26 13.0712C26 20.2902 20.1797 26.1424 13 26.1424C5.8203 26.1424 0 20.2902 0 13.0712C0 5.85216 5.8203 0 13 0C20.1797 0 26 5.85216 26 13.0712ZM12.7298 2.55836C12.024 3.55481 11.4241 4.40175 10.2424 5.14941C11.8823 8.39663 12.4046 9.82194 13 13.0713C13.5953 9.82194 14.1176 8.39663 15.7575 5.14941C14.5758 4.40175 13.9759 3.55481 13.2701 2.55835L13.2701 2.55828C13.1821 2.43411 13.0925 2.30761 13 2.17869C12.9074 2.30761 12.8178 2.43411 12.7298 2.55829L12.7298 2.55836Z"
+      fill="white"/>
+</svg>
+        </span>
+        <span class="mobile-links__text">Главная</span>
+    </a>
+    <a href="#catalog__modal" class="mobile-links open_modal">
+        <span class="mobile-links__icon">
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="7.77778" height="7.77778" stroke="white" stroke-width="2"/>
+<rect x="1" y="13.2222" width="7.77778" height="7.77778" stroke="white" stroke-width="2"/>
+<rect x="13.2222" y="1" width="7.77778" height="7.77778" stroke="white" stroke-width="2"/>
+<rect x="13.2222" y="13.2222" width="7.77778" height="7.77778" stroke="white" stroke-width="2"/>
+</svg>
+        </span>
+        <span class="mobile-links__text">Каталог</span>
+    </a>
+    <a href="#search__modal" class="mobile-links open_modal">
+        <span class="mobile-links__icon">
+<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="9.16667" cy="9.16667" r="8.16667" stroke="white" stroke-width="2"/>
+<path d="M15.5835 15.5835L22.0002 22.0002" stroke="white" stroke-width="2"/>
+</svg>
+        </span>
+        <span class="mobile-links__text">Поиск</span>
+    </a>
+
+    <a href="#" class="mobile-links">
+        <span class="mobile-links__icon">
+<svg width="8" height="22" viewBox="0 0 8 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd"
+      d="M2 2H6V6H2V2ZM0 0H2H6H8V2V6V8H6H2H0V6V2V0ZM2 12H6V20H2V12ZM0 10H2H6H8V12V20V22H6H2H0V20V12V10Z" fill="white"/>
+</svg>
+        </span>
+        <span class="mobile-links__text">Контакты</span>
+    </a>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>
