@@ -68,6 +68,13 @@
   .links-details__slide
     right: 90px
 
+  .advantages-text
+    font-size: 24px
+    margin: 0 auto 80px
+
+  .advantages
+    margin: -130px auto 80px
+
 
 @media only screen and (max-width: 1420px)
   .form-search
@@ -117,6 +124,18 @@
     right: -96px
     top: 23px
 
+  .trading .list-cube
+    li
+      margin: 0 48px 30px 0
+
+  h2
+    font-size: 60px
+
+  .about
+    padding: 150px 0
+
+  .about-content
+    max-width: 559px
 
 
 /* Small Devices, Tablets */
@@ -139,6 +158,22 @@
   .logo
     margin: 0 22px 0 0
 
+  .catalog-home h2
+    width: 100%
+    margin: 0 0 40px
+
+  .catalog-home__wrapper
+    margin: 80px 0 0
+
+  .catalog-home__title
+    font-size: 22px
+
+  .catalog-home__box
+    font-size: 14px
+    margin: 0
+    padding: 0 0 40px
+
+
 @media only screen and (max-width: 1199px)
   .links-call, .phone, .menu-links
     font-size: 14px
@@ -146,6 +181,10 @@
   #thanks__modal .modal__close
     right: 0
     top: 0
+
+  .advantages-box
+    width: calc(50% - 5px)
+    padding: 50px 60px 40px
 
 @media only screen and (max-width: 1100px)
   .header-item__phone
@@ -177,6 +216,35 @@
 
   .slide-img
     width: 1167px
+
+  .trading
+    padding: 150px 0 130px
+    .description-title
+      font-size: 22px
+    .list-cube
+      font-size: 16px
+
+  h2
+    font-size: 54px
+
+  .about-content
+    max-width: 481px
+
+  .about
+    background: #fff
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 150px
+      left: 50%
+      transform: translate(-50%,0)
+      width: 1436px
+      height: 644px
+      background: url("../img/bg2.jpg") no-repeat center
+        size: cover
+    .text
+      font-size: 22px
 
 @media only screen and (max-width: 1010px)
   .container
@@ -217,6 +285,33 @@
 
   .main-home__slide
     min-height: auto
+
+  .links-pdf
+    width: 35%
+    margin: 0 auto
+    order: 1
+    justify-content: flex-end
+
+  .links-catalog
+    width: 64%
+    padding: 0
+    margin: 0 auto
+    order: 1
+
+  .catalog-home
+    padding: 80px 0 0
+    .line
+      width: 1%
+      order: 1
+    h2
+      width: auto
+    .line-title
+      .btn
+        margin: 0 0 40px
+
+  .catalog-home__body
+    padding: 30px
+
 
 @media only screen and (max-width: 860px)
   .header-item__menu, .header-item__search
@@ -296,6 +391,53 @@
       background: url("../img/cursor.svg") no-repeat center
         size: contain
 
+  .advantages-text
+    margin: 0 auto 60px
+    font-size: 22px
+    padding: 0 60px
+
+  .advantages
+    margin: -200px auto 80px
+    .container
+      padding: 0
+
+  .advantages-box
+    padding: 50px 60px
+    align-items: flex-start
+    text-align: left
+    h3
+      font-size: 22px
+      margin: 30px 0 20px
+
+  .trading
+    padding: 100px 0
+    .list-cube
+      justify-content: flex-start
+      li
+        margin: 0 30px 23px 0
+    .description-title, h2
+      text-align: left
+
+  .container
+    padding: 0 60px
+
+  .trading-links
+    justify-content: space-between
+
+  .trading-link
+    margin: 0
+
+  .about
+    padding: 150px 0 552px
+    &:before
+      left: auto
+      right: 0
+      transform: none
+      bottom: 0
+      top: auto
+
+  .about-content
+    max-width: 642px
 
 @media only screen and (max-width: 710px)
   .container
@@ -315,6 +457,11 @@
 
   .main-home__description
     font-size: 28px
+
+@media only screen and (max-width: 650px)
+  .trading-link
+    width: 100%
+    margin: 0 0 10px
 
 @media only screen and (max-width: 630px)
   .mobile-links
@@ -358,7 +505,7 @@
 
   .slide-img
     width: 462px
-    top: 159px
+    top: 130px
     right: -38px
 
   .main-home__title
@@ -384,6 +531,90 @@
 
   .links-details__slide
     display: none
+
+  .advantages
+    margin: -20px auto 60px
+
+  .advantages-box
+    width: 100%
+    padding: 20px 25px
+    text-align: center
+    align-items: center
+    font-size: 14px
+    h3
+      margin: 20px 0 10px
+      font-size: 20px
+
+  .advantages-text
+    font-size: 16px
+    padding: 0 25px
+
+  .about
+    padding: 60px 0 240px
+    &:before
+      width: 645px
+      height: 289px
+    .text
+      font-size: 18px
+      margin: 30px 0 35px
+
+  .date-about
+    font-size: 24px
+    max-width: 205px
+
+  .catalog-home__box
+    width: 100%
+    flex-direction: row
+    align-items: flex-start
+    padding: 0 0 17px
+    font-size: 12px
+    border: none
+      bottom: 2px solid #F1F3F2
+    .btn
+      display: none
+
+  .catalog-home__img
+    width: 159px
+    order: 1
+
+  .catalog-home__body
+    width: calc(100% - 159px)
+    padding: 20px 0 20px 30px
+    text-align: left
+    p
+      display: none
+
+  .catalog-home__title
+    font-size: 14px
+    margin: 0 0 10px
+
+  .catalog-home__wrapper
+    margin: 58px 0 0
+
+  .catalog-home
+    padding: 60px 0 0
+    .line-title
+      a, .btn
+        display: none
+    h2
+      margin: 0
+    .line-bottom
+      padding: 30px 26px 22px
+      .btn
+        margin: 0 0 20px
+        height: 70px
+        font-size: 16px
+        max-width: 268px
+
+  .links-pdf
+    width: auto
+    justify-content: flex-start
+    margin: 0
+    font-size: 16px
+
+
+  .line-bottom
+    display: flex
 
 
 @media only screen and (max-width: 575px)
@@ -458,6 +689,28 @@
 
   .form-group label
     width: 100%
+
+  h2
+    font-size: 30px
+
+  .trading
+    padding: 100px 0 40px
+    .description-title
+      margin: 20px 0 40px
+      font-size: 18px
+
+  .trading .list-cube
+    flex-direction: column
+    align-items: flex-start
+    li
+      margin: 0 0 30px
+
+  .list-cube li:before
+    top: 10px
+
+  .trading-links
+    margin: 10px 0 0
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)

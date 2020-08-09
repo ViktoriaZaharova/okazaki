@@ -701,13 +701,22 @@ footer
 //catalog home
 .catalog-home
   padding: 90px 0 0
-  border:
-    bottom: 2px solid #F1F3F2
+
   h2
     margin: 0 auto 0 0
   .line-title
     .btn
       max-width: 217px
+  .line
+    width: 2px
+    color: #F1F3F2
+
+.line-bottom
+  width: 100%
+  display: none
+  flex-direction: column
+  align-items: flex-start
+
 
 .links-catalog
   display: flex
@@ -715,8 +724,7 @@ footer
   color: #111
   font-weight: 600
   padding: 0 30px 0 0
-  border:
-    right: 2px solid #F1F3F2
+
   .icon
     width: 22px
     height: 20px
@@ -742,6 +750,9 @@ footer
   align-items: stretch
   flex-wrap: wrap
   margin: 105px 0 0
+  border:
+    top: 2px solid #F1F3F2
+    bottom: 2px solid #F1F3F2
 
 .catalog-home__box
   width: 33.3%
@@ -757,7 +768,7 @@ footer
     border: none
   .btn
     max-width: 188px
-    margin: 0 auto
+    margin: auto auto 0
 
 .catalog-home__img
   width: 100%

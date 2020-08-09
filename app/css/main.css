@@ -809,12 +809,25 @@ footer {
   width: 100%; }
 
 .catalog-home {
-  padding: 90px 0 0;
-  border-bottom: 2px solid #F1F3F2; }
+  padding: 90px 0 0; }
   .catalog-home h2 {
     margin: 0 auto 0 0; }
   .catalog-home .line-title .btn {
     max-width: 217px; }
+  .catalog-home .line {
+    width: 2px;
+    color: #F1F3F2; }
+
+.line-bottom {
+  width: 100%;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
 
 .links-catalog {
   display: -webkit-box;
@@ -825,8 +838,7 @@ footer {
           align-items: center;
   color: #111;
   font-weight: 600;
-  padding: 0 30px 0 0;
-  border-right: 2px solid #F1F3F2; }
+  padding: 0 30px 0 0; }
   .links-catalog .icon {
     width: 22px;
     height: 20px;
@@ -860,7 +872,9 @@ footer {
           align-items: stretch;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 105px 0 0; }
+  margin: 105px 0 0;
+  border-top: 2px solid #F1F3F2;
+  border-bottom: 2px solid #F1F3F2; }
 
 .catalog-home__box {
   width: 33.3%;
@@ -884,7 +898,7 @@ footer {
     border: none; }
   .catalog-home__box .btn {
     max-width: 188px;
-    margin: 0 auto; }
+    margin: auto auto 0; }
 
 .catalog-home__img {
   width: 100%;
@@ -1561,7 +1575,12 @@ sup {
   .container {
     padding: 0 90px; }
   .links-details__slide {
-    right: 90px; } }
+    right: 90px; }
+  .advantages-text {
+    font-size: 24px;
+    margin: 0 auto 80px; }
+  .advantages {
+    margin: -130px auto 80px; } }
 
 @media only screen and (max-width: 1420px) {
   .form-search {
@@ -1608,7 +1627,15 @@ sup {
     right: 30px; }
   .slide-img {
     right: -96px;
-    top: 23px; } }
+    top: 23px; }
+  .trading .list-cube li {
+    margin: 0 48px 30px 0; }
+  h2 {
+    font-size: 60px; }
+  .about {
+    padding: 150px 0; }
+  .about-content {
+    max-width: 559px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 1370px) {
@@ -1625,14 +1652,28 @@ sup {
   .links-call, .phone, .menu-links {
     padding: 0 22px; }
   .logo {
-    margin: 0 22px 0 0; } }
+    margin: 0 22px 0 0; }
+  .catalog-home h2 {
+    width: 100%;
+    margin: 0 0 40px; }
+  .catalog-home__wrapper {
+    margin: 80px 0 0; }
+  .catalog-home__title {
+    font-size: 22px; }
+  .catalog-home__box {
+    font-size: 14px;
+    margin: 0;
+    padding: 0 0 40px; } }
 
 @media only screen and (max-width: 1199px) {
   .links-call, .phone, .menu-links {
     font-size: 14px; }
   #thanks__modal .modal__close {
     right: 0;
-    top: 0; } }
+    top: 0; }
+  .advantages-box {
+    width: calc(50% - 5px);
+    padding: 50px 60px 40px; } }
 
 @media only screen and (max-width: 1100px) {
   .header-item__phone {
@@ -1656,7 +1697,33 @@ sup {
     width: 100%;
     text-align: right; }
   .slide-img {
-    width: 1167px; } }
+    width: 1167px; }
+  .trading {
+    padding: 150px 0 130px; }
+    .trading .description-title {
+      font-size: 22px; }
+    .trading .list-cube {
+      font-size: 16px; }
+  h2 {
+    font-size: 54px; }
+  .about-content {
+    max-width: 481px; }
+  .about {
+    background: #fff;
+    position: relative; }
+    .about:before {
+      content: '';
+      position: absolute;
+      top: 150px;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+              transform: translate(-50%, 0);
+      width: 1436px;
+      height: 644px;
+      background: url("../img/bg2.jpg") no-repeat center;
+        background-size: cover; }
+    .about .text {
+      font-size: 22px; } }
 
 @media only screen and (max-width: 1010px) {
   .container {
@@ -1686,7 +1753,36 @@ sup {
     top: 90px;
     right: -70px; }
   .main-home__slide {
-    min-height: auto; } }
+    min-height: auto; }
+  .links-pdf {
+    width: 35%;
+    margin: 0 auto;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .links-catalog {
+    width: 64%;
+    padding: 0;
+    margin: 0 auto;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+  .catalog-home {
+    padding: 80px 0 0; }
+    .catalog-home .line {
+      width: 1%;
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; }
+    .catalog-home h2 {
+      width: auto; }
+    .catalog-home .line-title .btn {
+      margin: 0 0 40px; }
+  .catalog-home__body {
+    padding: 30px; } }
 
 @media only screen and (max-width: 860px) {
   .header-item__menu, .header-item__search {
@@ -1750,7 +1846,53 @@ sup {
       width: 47px;
       height: 37px;
       background: url("../img/cursor.svg") no-repeat center;
-        background-size: contain; } }
+        background-size: contain; }
+  .advantages-text {
+    margin: 0 auto 60px;
+    font-size: 22px;
+    padding: 0 60px; }
+  .advantages {
+    margin: -200px auto 80px; }
+    .advantages .container {
+      padding: 0; }
+  .advantages-box {
+    padding: 50px 60px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left; }
+    .advantages-box h3 {
+      font-size: 22px;
+      margin: 30px 0 20px; }
+  .trading {
+    padding: 100px 0; }
+    .trading .list-cube {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
+      .trading .list-cube li {
+        margin: 0 30px 23px 0; }
+    .trading .description-title, .trading h2 {
+      text-align: left; }
+  .container {
+    padding: 0 60px; }
+  .trading-links {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .trading-link {
+    margin: 0; }
+  .about {
+    padding: 150px 0 552px; }
+    .about:before {
+      left: auto;
+      right: 0;
+      -webkit-transform: none;
+              transform: none;
+      bottom: 0;
+      top: auto; }
+  .about-content {
+    max-width: 642px; } }
 
 @media only screen and (max-width: 710px) {
   .container {
@@ -1765,6 +1907,11 @@ sup {
     font-size: 50px; }
   .main-home__description {
     font-size: 28px; } }
+
+@media only screen and (max-width: 650px) {
+  .trading-link {
+    width: 100%;
+    margin: 0 0 10px; } }
 
 @media only screen and (max-width: 630px) {
   .mobile-links {
@@ -1817,7 +1964,7 @@ sup {
     margin: auto 0 52px; }
   .slide-img {
     width: 462px;
-    top: 159px;
+    top: 130px;
     right: -38px; }
   .main-home__title {
     font-size: 40px; }
@@ -1835,7 +1982,89 @@ sup {
   .main-home__slide {
     padding: 59px 0 62px; }
   .links-details__slide {
-    display: none; } }
+    display: none; }
+  .advantages {
+    margin: -20px auto 60px; }
+  .advantages-box {
+    width: 100%;
+    padding: 20px 25px;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 14px; }
+    .advantages-box h3 {
+      margin: 20px 0 10px;
+      font-size: 20px; }
+  .advantages-text {
+    font-size: 16px;
+    padding: 0 25px; }
+  .about {
+    padding: 60px 0 240px; }
+    .about:before {
+      width: 645px;
+      height: 289px; }
+    .about .text {
+      font-size: 18px;
+      margin: 30px 0 35px; }
+  .date-about {
+    font-size: 24px;
+    max-width: 205px; }
+  .catalog-home__box {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 0 0 17px;
+    font-size: 12px;
+    border: none;
+      border-bottom: 2px solid #F1F3F2; }
+    .catalog-home__box .btn {
+      display: none; }
+  .catalog-home__img {
+    width: 159px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+  .catalog-home__body {
+    width: calc(100% - 159px);
+    padding: 20px 0 20px 30px;
+    text-align: left; }
+    .catalog-home__body p {
+      display: none; }
+  .catalog-home__title {
+    font-size: 14px;
+    margin: 0 0 10px; }
+  .catalog-home__wrapper {
+    margin: 58px 0 0; }
+  .catalog-home {
+    padding: 60px 0 0; }
+    .catalog-home .line-title a, .catalog-home .line-title .btn {
+      display: none; }
+    .catalog-home h2 {
+      margin: 0; }
+    .catalog-home .line-bottom {
+      padding: 30px 26px 22px; }
+      .catalog-home .line-bottom .btn {
+        margin: 0 0 20px;
+        height: 70px;
+        font-size: 16px;
+        max-width: 268px; }
+  .links-pdf {
+    width: auto;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 0;
+    font-size: 16px; }
+  .line-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
 
 @media only screen and (max-width: 575px) {
   .header-item__phone {
@@ -1915,7 +2144,28 @@ sup {
     padding: 20px 0;
     font-size: 14px; }
   .form-group label {
-    width: 100%; } }
+    width: 100%; }
+  h2 {
+    font-size: 30px; }
+  .trading {
+    padding: 100px 0 40px; }
+    .trading .description-title {
+      margin: 20px 0 40px;
+      font-size: 18px; }
+  .trading .list-cube {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .trading .list-cube li {
+      margin: 0 0 30px; }
+  .list-cube li:before {
+    top: 10px; }
+  .trading-links {
+    margin: 10px 0 0; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
