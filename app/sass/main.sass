@@ -115,6 +115,11 @@ input, textarea
     &:valid, &:invalid
       color: #1A1A1A
 
+select
+  outline: none
+  font-family: $default-font
+  font-size: 16px
+
 
 input
   padding: 0 0 30px
@@ -211,6 +216,23 @@ label
   color: #111
   height: 60px
 
+.btn-grey
+  background: #F1F3F2
+  font-size: 16px
+  font-weight: 600
+  color: #111
+  letter-spacing: 0.05em
+  &:hover
+    background: $accent
+    color: #fff
+    .icon
+      svg
+        path
+          stroke: #fff
+  .icon
+    svg
+      path
+        stroke: #111
 
 
 .container
@@ -242,6 +264,7 @@ label
 h1
   font-size: 60px
   font-weight: bold
+  width: 100%
 
 h2
   font-size: 70px
@@ -254,7 +277,7 @@ h2
   align-items: center
   justify-content: space-between
   flex-wrap: wrap
-  h2
+  h2, h1
     width: auto
 
 .description-title
@@ -271,6 +294,13 @@ header
   justify-content: space-between
   width: 100%
   position: relative
+
+header.fixed
+  position: fixed
+  z-index: 6
+  left: 0
+  top: 0
+  width: 100%
 
 
 .header-item
@@ -560,11 +590,15 @@ footer
   position: absolute
   z-index: 8
   top: 80px
+  left: 0
   width: 100%
   background: #fff
   box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1)
   padding: 40px 0
   display: none
+
+.category-dropdown.fixed
+  position: fixed
 
 .category-dropdown__wrapper
   width: 100%
@@ -638,6 +672,9 @@ footer
   li
     position: relative
     padding: 0 0 0 23px
+    margin: 0 0 20px
+    &:last-child
+      margin: 0
     &:before
       content: ''
       position: absolute
@@ -1311,6 +1348,462 @@ sup
     margin: 80px 0 0
 
 
+//catalog page
+.catalog
+  padding: 0 0 80px
+
+.catalog-wrapper
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+
+.sidebar
+  width: 343px
+  .button-group
+    display: none
+
+.dropdown-item
+  background: #F1F3F2
+  text-align: center
+  font-size: 16px
+  font-weight: bold
+  color: #111111
+  width: 100%
+  height: 69px
+  display: none
+  align-items: center
+  justify-content: center
+  .icon
+    margin: 0 0 0 15px
+    width: 10px
+    height: 5px
+    display: flex
+    align-items: center
+    justify-content: center
+
+.dropdown-menu
+  position: relative
+  width: 172px
+
+.dropdown-wrapper
+  position: absolute
+  top: 100%
+  width: 100%
+  background: #fff
+  z-index: 2
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.2)
+  display: none
+  .sections-box__links
+    padding: 15px 10px
+    font-size: 14px
+
+.description
+  margin: 40px 0 80px
+  color: #353535
+  font-weight: 500
+  line-height: 160%
+
+.btn-filter
+  max-width: none
+  font-size: 16px
+  font-weight: bold
+  height: 69px
+  svg
+    path
+      fill: #111
+  &:hover, &:focus
+    svg
+      path
+        fill: #fff
+
+.sections-box
+  width: 100%
+  margin: 33px 0 0
+  border: 2px solid #F1F3F2
+    bottom: none
+
+.section-box__title
+  width: 100%
+  padding: 25px 30px 24px
+  font-size: 16px
+  font-weight: bold
+  border-bottom: 2px solid #F1F3F2
+  background: #FAFAFA
+
+.sections-box__links
+  position: relative
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  color: #111
+  font-weight: 500
+  padding: 25px 30px 24px
+  border-bottom: 2px solid #F1F3F2
+  &:hover
+    background: #FAFAFA
+
+.sections-box__links.active
+  border-color: $accent
+  .text
+    color: $accent
+
+.catalog-wrapper__content
+  width: calc(100% - 343px)
+  padding: 0 0 0 50px
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+  flex-wrap: wrap
+
+.card-product
+  width: 33.3%
+  overflow: hidden
+  position: relative
+  height: 510px
+  padding: 0 0 50px
+  font-weight: 500
+  border-bottom: 2px solid #F1F3F2
+  display: none
+  &:nth-child(-n+9)
+    display: block
+  .btn
+    margin: 30px 0 0
+    height: 60px
+    max-width: none
+    font-size: 16px
+    font-weight: 600
+    letter-spacing: 0.05em
+    display: none
+    transition: .3s ease
+  &:hover
+    overflow: visible
+    z-index: 2
+    .btn
+      display: flex
+    .card-product__wrapper
+      box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1)
+
+
+.card-product__wrapper
+  position: absolute
+  left: 50%
+  transform: translate(-50%,0)
+  padding: 30px
+  background: #fff
+  transition: .3s ease
+  top: -30px
+  z-index: 1
+  width: calc(100% + 60px)
+
+.card-product__img
+  width: 100%
+  height: 250px
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 0 30px
+
+
+.card-product__title
+  margin: 15px 0 30px
+  font-size: 18px
+  font-weight: bold
+  color: #111111
+
+.card-product__characteristic
+  color: #7B7B7B
+
+.load-more
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 33px 0
+  letter-spacing: 0.03em
+  font-weight: 500
+  color: #000
+  border-bottom: 2px solid #F1F3F2
+  &:hover
+    color: $accent
+
+.load-more__icon
+  margin: 0 0 0 11px
+
+.pagination
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  border-bottom: 2px solid #F1F3F2
+  margin: -2px 0 0
+  li
+
+    a
+      width: 94px
+      height: 94px
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+      font-size: 18px
+      font-weight: 500
+      color: #000
+      border: 2px solid #F1F3F2
+      margin: 0 -2px -2px 0
+      &:hover
+        background: $accent
+        color: #fff
+        svg
+          path
+            stroke: #fff
+    .active
+      color: $accent
+
+
+  .pagination-item__prev
+    margin: 0 auto 0 0
+    a
+      border: 2px solid $accent
+
+  .pagination-item__next
+    margin: 0 0 0 auto
+    a
+      border: 2px solid $accent
+
+.links-toggle
+  font-size: 16px
+  font-weight: bold
+  color: #353535
+  display: none
+  text-decoration: underline
+
+.pagination-mobile
+  display: none
+  width: 100%
+  flex-wrap: wrap
+  .pagination-item__prev
+    margin: 0 auto 0 0
+    width: 50%
+    a
+      border: 2px solid $accent
+      width: 94px
+      height: 94px
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+      font-size: 18px
+      font-weight: 500
+      color: #000
+      &:hover
+        background: $accent
+        color: #fff
+        svg
+          path
+            stroke: #fff
+
+  .pagination-item__next
+    margin: 0 0 0 auto
+    width: 50%
+    a
+      border: 2px solid $accent
+      width: 94px
+      height: 94px
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+      font-size: 18px
+      font-weight: 500
+      color: #000
+      &:hover
+        background: $accent
+        color: #fff
+        svg
+          path
+            stroke: #fff
+
+//product
+.product
+  padding: 0 0 60px
+  h1
+    font-size: 40px
+    margin: 20px 0 60px
+  .selection-name
+    font-weight: bold
+
+.subtitle
+  margin: 0 0 40px
+  width: 100%
+  font-size: 25px
+  font-weight: bold
+
+.links-files
+  display: flex
+  align-items: center
+  font-weight: 600
+  color: #111
+  margin: 0 30px 0 0
+  border-bottom: 2px solid transparent
+  padding: 0 0 10px
+  &:hover
+    border-color: $accent
+  .icon
+    &:nth-child(2)
+      margin: 0 10px 0 20px
+  &:last-child
+    margin: 0
+
+.list-files
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: flex-start
+
+.product-image
+  width: 605px
+
+.product-image__max
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 0 30px
+  height: 468px
+  border: 2px solid #F1F3F2
+
+.product-image__min
+  width: 100%
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  .item
+    margin: 0 0 20px
+    width: 136px
+    height: 97px
+    border: 2px solid #F1F3F2
+    transition: .3s ease
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+
+  .click-item
+    border-color: $accent
+
+
+.col-25
+  width: 25%
+
+.product-content
+  width: calc(100% - 605px)
+  padding: 0 0 0 50px
+  .button-group
+    align-items: stretch
+    display: flex
+    justify-content: flex-start
+    &:last-child
+      margin: 0
+    .btn
+      max-width: 339px
+      height: 70px
+      font-weight: 600
+      font-size: 16px
+      margin: 0 30px 0 0
+      &:last-child
+        margin: 0
+
+.files-wrapper
+  margin: 60px 0
+
+.table-responsive
+  width: 100%
+  overflow-x: auto
+
+.table
+  width: 100%
+  border: 2px solid #FAFAFA
+  font-weight: 500
+
+.table-head
+  width: 100%
+  border-bottom: 2px solid #FAFAFA
+  background: #FAFAFA
+  padding: 18px 50px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  font-weight: bold
+
+.table-th, .table-td
+  &:first-child
+    width: 70%
+  &:nth-child(2)
+    width: 30%
+
+.table-tr
+  padding: 16px 50px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  border-bottom: 2px solid #FAFAFA
+  &:last-child
+    border: none
+
+.table-body
+  width: 100%
+
+.description-block
+  margin: 60px 0 0
+  .text-box
+    margin: 0 0 40px
+    line-height: 140%
+
+.product-content__mobile
+  display: none
+  .button-group
+    display: none
+
+.product-image__slider
+  width: 100%
+  display: none
+
+.product-image__slide
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 208px
+  border: 2px solid #F1F3F2
+  overflow: hidden
+
+.slick-dots
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  bottom: 0
+  width: 100%
+  margin: 20px 0 0
+  li
+    width: 10px
+    height: 10px
+    background: #B4B4B4
+    margin: 0 20px 0 0
+    &:last-child
+      margin: 0
+    button
+      display: none
+  .slick-active
+    background: $accent
+
+.slick-dotted.slick-slider
+  margin-bottom: 0
 
 @import "media"
 // Всегда в конце

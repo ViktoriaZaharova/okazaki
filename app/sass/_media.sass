@@ -137,6 +137,31 @@
   .about-content
     max-width: 559px
 
+  .sidebar
+    width: 255px
+
+  .catalog-wrapper__content
+    width: calc(100% - 255px)
+
+  .product-image
+    width: 458px
+
+  .product-image__max
+    height: 356px
+    margin: 0 0 20px
+
+  .product-content
+    width: calc(100% - 458px)
+
+  .product-image__min .item
+    width: 102px
+    height: 74px
+    margin: 0 0 15px
+
+  .table-tr
+    padding: 15px 40px
+
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 1370px)
@@ -150,6 +175,9 @@
     font-size: 40px
     max-width: none
     margin: 10px 0 0
+
+
+
 
 @media only screen and (max-width: 1300px)
   .links-call, .phone, .menu-links
@@ -190,6 +218,57 @@
   .advantages-box
     width: calc(50% - 5px)
     padding: 50px 60px 40px
+
+  .product-content__mobile
+    display: block
+
+  .product-content
+    .files-wrapper, .characteristic-block, .description-block
+      display: none
+
+  .product-image
+    width: 410px
+
+  .product-content
+    width: calc(100% - 410px)
+    padding: 0 0 0 48px
+    .button-group
+      flex-direction: column
+      align-items: flex-start
+      .btn
+        max-width: none
+        margin: 0 0 20px
+
+  .product-image__max
+    height: 318px
+
+  .product-image__min
+    justify-content: space-between
+    .item
+      margin: 0 0 18px
+      width: 100%
+      height: 88px
+
+  .col-25
+    width: 123px
+
+  .files-wrapper
+    margin: 20px 0 40px
+
+  .subtitle
+    margin: 0 0 30px
+
+  .product
+    padding: 0 0 40px
+
+  .description-block
+    margin: 40px 0 0
+    .text-box
+      margin: 0 0 30px
+
+  .table-tr
+    padding: 15px 50px
+
 
 @media only screen and (max-width: 1100px)
   .header-item__phone
@@ -250,6 +329,40 @@
         size: cover
     .text
       font-size: 22px
+
+  .sidebar
+    width: 100%
+    padding: 0 0 60px
+    display: flex
+    align-items: stretch
+    justify-content: space-between
+    flex-wrap: wrap
+    .button-group
+      display: flex
+      align-items: stretch
+      .btn
+        width: 172px
+        height: 69px
+        margin: 0 10px 0 0
+        font-size: 16px
+
+  .dropdown-item
+    display: flex
+
+  .btn-filter
+    max-width: 239px
+    margin: 0 0 0 auto
+
+  .sections-box
+    display: none
+
+  .description
+    margin: 40px 0 60px
+    font-size: 16px
+
+  .catalog-wrapper__content
+    width: 100%
+    padding: 0
 
 @media only screen and (max-width: 1010px)
   .container
@@ -328,6 +441,52 @@
 
   .breadcrumbs-wrapper
     padding: 40px 0 20px
+
+@media only screen and (max-width: 950px)
+  .product-content
+    width: 100%
+    padding: 0
+    order: -1
+    .button-group
+      display: none
+    h1
+      margin: 20px 0 40px
+
+  .product-image
+    width: 100%
+
+  .product-image__max
+    height: 408px
+    margin: 0 0 40px
+
+  .product-image__min
+    justify-content: flex-start
+    padding: 0 60px
+    margin: 0 -60px
+    .item
+      width: 100%
+      height: 73px
+      margin: 0 0 30px
+
+  .col-25
+    width: 20%
+    padding: 0 30px 0 0
+
+  .table-head
+    padding: 16px 40px
+
+  .table-tr
+    padding: 15px 40px
+
+  .product-content__mobile .button-group
+    display: flex
+    flex-direction: row
+    .btn
+      max-width: 311px
+      margin: 0 20px 0 0
+      height: 70px
+      &:last-child
+        margin: 0
 
 @media only screen and (max-width: 860px)
   .header-item__menu, .header-item__search
@@ -467,6 +626,36 @@
       .links-pdf
         display: none
 
+  .card-product
+    width: 50%
+    display: none
+    padding: 0 25px 50px 0
+    &:nth-child(even)
+      padding: 0 0 50px 25px
+      .card-product__wrapper
+        left: calc(50% + 25px)
+    &:nth-child(-n+9)
+      display: none
+    &:nth-child(-n+6)
+      display: block
+
+
+@media only screen and (max-width: 768px)
+  header.fixed
+    box-shadow: none
+    background: transparent
+    .logo, .header-item__phone
+      display: none
+    .links-call
+      width: 70px
+      height: 70px
+      margin: 0 0 0 auto
+      background: #111
+    .links-call__text
+      display: none
+    .links-call__icon
+      margin: 0
+
 @media only screen and (max-width: 710px)
   .container
     padding: 0 26px
@@ -490,6 +679,49 @@
   .trading-link
     width: 100%
     margin: 0 0 10px
+
+  .sidebar
+    .button-group
+      flex-wrap: wrap
+      width: 100%
+      .btn
+        max-width: none
+        width: 100%
+        margin: 0 0 10px
+
+  .dropdown-menu
+    width: 100%
+    max-width: none
+
+  .btn-filter
+    order: -1
+    margin: 0 0 10px
+    max-width: none
+
+  .catalog-wrapper__content
+    border-top: 2px solid #F1F3F2
+
+
+  .product-image
+    display: none
+
+  .product-image__slider
+    display: block
+
+  .product-content__mobile
+    margin: 40px 0 0
+    .button-group
+      flex-direction: column
+      align-items: center
+      .btn
+        margin: 0 auto 20px
+        &:last-child
+          margin: 0
+
+  .product
+    h1
+      font-size: 32px
+
 
 @media only screen and (max-width: 630px)
   .mobile-links
@@ -655,6 +887,66 @@
   h1
     font-size: 32px
 
+  .pagination li a
+    width: 68px
+    height: 68px
+
+  .load-more
+    padding: 22px 0
+    border:
+      top: 2px solid #F1F3F2
+
+
+  .catalog
+    padding: 0 0 60px
+
+  .card-product
+    width: 100%
+    padding: 0 0 50px
+    height: 500px
+    border: none
+    display: none
+    &:nth-child(-n+6)
+      display: none
+    &:nth-child(-n+3)
+      display: block
+    &:nth-child(even)
+      padding: 0 0 50px
+      .card-product__wrapper
+        left: 50%
+
+  .catalog-wrapper__content
+    padding: 50px 0 0
+
+  .pagination
+    display: none
+    margin: 20px 0 0
+    border: none
+    flex-wrap: wrap
+    width: 100%
+    justify-content: center
+    .pagination-item__prev, .pagination-item__next
+      width: 50%
+      order: 1
+      margin: 0
+
+  .pagination-mobile
+    display: flex
+    .pagination
+      display: flex
+      margin: 20px 0
+
+    .pagination-item__prev, .pagination-item__next
+      a
+        height: 67px
+        width: 100%
+    .pagination-item__prev
+      margin: 0 -1px 0 0
+    .pagination-item__next
+      margin: 0 0 0 -1px
+
+  .table
+    width: 642px
 
 
 @media only screen and (max-width: 575px)
@@ -751,6 +1043,18 @@
   .trading-links
     margin: 10px 0 0
 
+  .description
+    .text
+      display: none
+      margin: 0 0 20px
+
+  .links-toggle
+    display: block
+
+  header.fixed .links-call
+    width: 60px
+    height: 60px
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
@@ -808,6 +1112,9 @@
   .breadcrumbs-wrapper
     padding: 42px 0 22px
 
+  .product
+    padding: 0 0 50px
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 420px)
   .contact-popup
@@ -816,6 +1123,9 @@
     width: 100%
 
   .main-home__title
+    font-size: 28px
+
+  .product h1
     font-size: 28px
 
 
